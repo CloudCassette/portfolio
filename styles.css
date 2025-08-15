@@ -198,6 +198,15 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .profile-img:hover {
+        transform: none;
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: var(--shadow-xl);
+    }
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -306,6 +315,14 @@ body {
 .floating-card:hover {
     transform: translateY(-10px) scale(1.05);
     background: rgba(255, 255, 255, 0.25);
+}
+
+/* Disable hover effects on floating cards for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .floating-card:hover {
+        transform: none;
+        background: rgba(255, 255, 255, 0.15);
+    }
 }
 
 .floating-card i {
