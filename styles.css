@@ -69,7 +69,7 @@ body {
 }
 
 .nav-logo .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     background: var(--primary-gradient);
     -webkit-background-clip: text;
@@ -145,6 +145,46 @@ body {
     z-index: 1;
 }
 
+/* Profile Photo Styling */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-xl);
+    transition: var(--transition-medium);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Fallback when image doesn't load */
+.profile-photo::before {
+    content: "📸";
+    font-size: 4rem;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -162,9 +202,20 @@ body {
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    opacity: 0.8;
-    line-height: 1.7;
+    opacity: 0.9;
+    line-height: 1.8;
     animation: slideInLeft 1s ease-out 0.4s both;
+}
+
+.hero-description p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.hero-description p:last-child {
+    margin-bottom: 0;
 }
 
 .hero-buttons {
@@ -778,6 +829,12 @@ section:nth-child(even) {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
     }
     
     .timeline-item {
