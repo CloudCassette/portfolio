@@ -111,7 +111,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     color: white;
     position: relative;
     overflow: hidden;
@@ -189,6 +189,7 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: white !important;
     animation: slideInLeft 1s ease-out;
 }
 
@@ -196,6 +197,7 @@ body {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     opacity: 0.9;
+    color: white !important;
     animation: slideInLeft 1s ease-out 0.2s both;
 }
 
@@ -204,6 +206,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.8;
+    color: white !important;
     animation: slideInLeft 1s ease-out 0.4s both;
 }
 
