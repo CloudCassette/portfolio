@@ -860,17 +860,31 @@ section.hero,
     .profile-photo {
         width: 158px; /* 150px + 8px border */
         height: 158px;
+        margin: 0 auto 2rem auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .profile-img {
         width: 150px;
         height: 150px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .profile-photo::before {
         width: 150px;
         height: 150px;
         font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
     
     .timeline-item {
@@ -925,6 +939,24 @@ section.hero,
     
     .floating-card {
         padding: 1rem;
+    }
+    
+    /* Extra mobile-specific profile photo fixes */
+    .profile-photo {
+        width: 130px !important;
+        height: 130px !important;
+        margin: 0 auto 1.5rem auto !important;
+    }
+    
+    .profile-img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .profile-photo::before {
+        width: 120px !important;
+        height: 120px !important;
+        font-size: 2.5rem !important;
     }
 }
 
