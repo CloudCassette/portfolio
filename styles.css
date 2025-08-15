@@ -380,8 +380,8 @@ section {
     position: relative;
 }
 
-/* Apply white background to even sections, but NOT the hero */
-section:nth-child(even):not(.hero) {
+/* Apply white background to even sections, but NOT the hero or contact */
+section:nth-child(even):not(.hero):not(.contact) {
     background: var(--white);
 }
 
@@ -1026,6 +1026,30 @@ section.hero,
     
     .nav-menu {
         display: none;
+    }
+    
+    /* Mobile navigation menu */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
 
