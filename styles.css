@@ -149,7 +149,13 @@ body {
 .profile-photo {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2rem;
+    position: relative;
+    width: 208px; /* 200px + 8px border */
+    height: 208px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-img {
@@ -161,6 +167,8 @@ body {
     box-shadow: var(--shadow-xl);
     transition: var(--transition-medium);
     background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 /* Fallback when image doesn't load */
@@ -168,6 +176,10 @@ body {
     content: "📸";
     font-size: 4rem;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -176,7 +188,8 @@ body {
     align-items: center;
     justify-content: center;
     border: 4px solid rgba(255, 255, 255, 0.3);
-    z-index: -1;
+    z-index: 0;
+    margin: auto;
 }
 
 .profile-img:hover {
@@ -844,9 +857,20 @@ section.hero,
         gap: 2rem;
     }
     
+    .profile-photo {
+        width: 158px; /* 150px + 8px border */
+        height: 158px;
+    }
+    
     .profile-img {
         width: 150px;
         height: 150px;
+    }
+    
+    .profile-photo::before {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
     }
     
     .timeline-item {
