@@ -327,8 +327,17 @@ section {
     position: relative;
 }
 
-section:nth-child(even) {
+/* Apply white background to even sections, but NOT the hero */
+section:nth-child(even):not(.hero) {
     background: var(--white);
+}
+
+/* Ensure hero section keeps its gradient background */
+section.hero,
+#about.hero,
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
 }
 
 .section-title {
