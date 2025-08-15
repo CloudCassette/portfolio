@@ -64,3 +64,4 @@ Feel free to explore the code and reach out for opportunities or collaboration!
 
 Built with ❤️ and lots of colorful gradients!
 # Test credential storage
+# Credentials should be cached now
