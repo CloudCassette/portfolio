@@ -943,20 +943,22 @@ section.hero,
     
     /* Extra mobile-specific profile photo fixes */
     .profile-photo {
-        width: 130px !important;
-        height: 130px !important;
+        width: 128px !important; /* 120px + 8px border */
+        height: 128px !important;
         margin: 0 auto 1.5rem auto !important;
     }
     
     .profile-img {
         width: 120px !important;
         height: 120px !important;
+        border-width: 4px !important;
     }
     
     .profile-photo::before {
         width: 120px !important;
         height: 120px !important;
         font-size: 2.5rem !important;
+        border-width: 4px !important;
     }
 }
 
