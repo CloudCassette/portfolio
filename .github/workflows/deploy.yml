@@ -65,6 +65,7 @@ jobs:
             
           # Copy other files
           cp README.md dist/ || true
+          cp CNAME dist/ || true
           
           # Create a build info file
           echo "Built on: $(date)" > dist/build-info.txt
