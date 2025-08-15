@@ -393,6 +393,14 @@ section.hero,
     color: white !important;
 }
 
+/* Ensure contact section always keeps its gradient background */
+.contact,
+section.contact,
+#contact {
+    background: var(--accent-gradient) !important;
+    color: white !important;
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -879,8 +887,8 @@ section.hero,
 
 /* Contact Section */
 .contact {
-    background: var(--accent-gradient);
-    color: white;
+    background: var(--accent-gradient) !important;
+    color: white !important;
 }
 
 .contact .section-title {
@@ -1004,34 +1012,26 @@ section.hero,
         gap: 2rem;
     }
     
-    /* Fix profile photo positioning */
+    /* Fix profile photo positioning - remove fallback ::before element */
     .profile-photo {
         width: 150px !important;
         height: 150px !important;
         margin: 0 auto 2rem auto !important;
         position: relative !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
+        display: block !important;
+    }
+    
+    .profile-photo::before {
+        display: none !important;
     }
     
     .profile-img {
         width: 150px !important;
         height: 150px !important;
+        display: block !important;
+        margin: 0 auto !important;
         position: static !important;
         transform: none !important;
-        border: 4px solid rgba(255, 255, 255, 0.3) !important;
-    }
-    
-    .profile-photo::before {
-        width: 150px !important;
-        height: 150px !important;
-        font-size: 3rem !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        transform: none !important;
-        margin: 0 !important;
         border: 4px solid rgba(255, 255, 255, 0.3) !important;
     }
     
