@@ -1,14 +1,26 @@
 // Smooth scrolling and interactive features
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if device supports hover (not a touch device)
+    const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    
     // Initialize animations and interactions
     initSmoothScrolling();
     initScrollAnimations();
     initNavbarEffects();
     initParallaxEffects();
     initTypewriterEffect();
-    initFloatingCards();
-    initProgressBars();
+    
+    // Only init hover effects on non-touch devices
+    if (supportsHover) {
+        initFloatingCards();
+        initProgressBars();
+    }
+    
+    // Add touch device class for CSS targeting
+    if (!supportsHover) {
+        document.body.classList.add('touch-device');
+    }
 });
 
 // Smooth scrolling for navigation links
