@@ -66,6 +66,9 @@ jobs:
           # Copy other files
           cp README.md dist/ || true
           cp CNAME dist/ || true
+          cp robots.txt dist/ || true
+          cp sitemap.xml dist/ || true
+          cp BingSiteAuth.xml dist/ || true
           
           # Create a build info file
           echo "Built on: $(date)" > dist/build-info.txt
